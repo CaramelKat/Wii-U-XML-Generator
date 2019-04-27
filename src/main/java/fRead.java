@@ -1,3 +1,4 @@
+import com.google.common.base.CharMatcher;
 import com.google.common.base.Charsets;
 
 import java.io.FileReader;
@@ -37,11 +38,11 @@ public class fRead {
         }
     }
     public static String convertToUTF8(String s) {
-        byte bytes[];
-        bytes = s.getBytes(Charsets.UTF_8);
-        //CharMatcher legal = CharMatcher.javaLetterOrDigit();
-        //String out = legal.removeFrom(s);
-        return new String (bytes);
+        CharMatcher desired = CharMatcher.javaDigit()
+                .or(CharMatcher.javaLetter())
+                .or(CharMatcher.anyOf("()[]/*-+=.?!@#$%^&~\";:{}|,<>_ "))
+                .precomputed(); // optional, may improve performance, YMMV
+        return desired.retainFrom(s);
     }
     public static void loadConfig() {
         int pipeIndex = -1;
