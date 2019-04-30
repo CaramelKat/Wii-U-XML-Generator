@@ -222,7 +222,7 @@ public class xmlBuilder {
         result = result.replace("“", "\"");
         result = result.replace("”", "\"");
         result = result.replace("…", "...");
-        fRead.writeFile(fRead.convertToUTF8(result), "1stNUP.xml");
+        fRead.writeFile(result, "1stNUP.xml");
         News.clear();
         homebrew.clear();
         SSB.clear();
