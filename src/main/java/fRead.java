@@ -47,6 +47,7 @@ public class fRead {
     public static void loadConfig() {
         int pipeIndex = -1;
         String file = fRead.readFile("config.txt");
+        String subredditFile = fRead.readFile("subreddits.txt");
         String userName = "";
         String password = "";
         String clientID = "";
@@ -98,7 +99,8 @@ public class fRead {
                     password,
                     clientID,
                     clientSecret,
-                    appID);
+                    appID,
+                    subredditFile);
         }
     }
 
