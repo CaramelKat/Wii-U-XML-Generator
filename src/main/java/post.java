@@ -1,11 +1,12 @@
 public class post {
-    private String body, community_id, country_id, created_at, feeling_id, id, is_autopost, is_community_private_autopost, is_spoiler, is_app_jumpable, empathy_count, language_id, mii, mii_face_url, number;
+    private String body, subreddit, community_id, country_id, created_at, feeling_id, id, is_autopost, is_community_private_autopost, is_spoiler, is_app_jumpable, empathy_count, language_id, mii, mii_face_url, number;
     private painting painting;
     private String pid,platform_id, region_id;
     private int reply_count;
     private String screen_name, title_id;
-    public post(String body, String mii,painting painting, int reply_count, String title_id, String created_at, String screen_name, String community_id) {
+    public post(String body, String subreddit, String mii,painting painting, int reply_count, String title_id, String created_at, String screen_name, String community_id) {
         this.body = body;
+        this.subreddit = subreddit;
         this.community_id = community_id;
         this.country_id = "1";
         this.created_at = created_at;
@@ -29,6 +30,10 @@ public class post {
         this.title_id = title_id;
 
 
+    }
+
+    public String getSubreddit(){
+        return subreddit;
     }
 
 

@@ -3,7 +3,7 @@ import java.util.List;
 
 public class person {
     private post post;
-    private List posts = new ArrayList();
+    private List<post> posts = new ArrayList();
     public person() {
 
     }
@@ -13,6 +13,9 @@ public class person {
     }
     public void add(post entry) {
         posts.add(entry);
+    }
+    public List<post> getPosts(){
+        return posts;
     }
 
 }
