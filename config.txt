@@ -1,1 +1,1 @@
-JayDaBirb|id165964|5_n1JbUgFZjZ2w|x3VSWeh9Clomz_5I0QD-rDVlYyg|com.gethub.caramelkat.WWPXML|
+userName|password|clientID|clientSecret|appID|
